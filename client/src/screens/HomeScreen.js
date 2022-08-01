@@ -5,6 +5,7 @@ import WelcomePage from '../components/WelcomePage';
 
 const HomeScreen = () => {
   if (!localStorage.getItem('data')) {
+    
     return (
       <div id="home">
         <h1 className="text-center display-4 text-light">

@@ -5,17 +5,23 @@ import { Link } from 'react-router-dom';
 import { GiReceiveMoney } from 'react-icons/gi';
 import { AiOutlineDatabase } from 'react-icons/ai';
 import { BiBookReader } from 'react-icons/bi';
+import Chatbot from 'react-chatbot-kit';
 
 const WelcomePage = () => {
   const [userName, setUserName] = useContext(UserNameContext);
 
+
   return (
+
+
+    
     <div id="home">
-      <div className="home-content m-0 text-justify w-100">
+           
+       <div className="home-content m-0 text-justify w-100">
         <h1 className="text-center">
           Hi {userName}, and welcome to UK's No. 1 trading playground!
         </h1>
-        <Container>
+        <Container> 
           <Row>
             <Col lg={4}>
               <Card bg="transparent" className="home-card mt-3">
@@ -80,7 +86,7 @@ const WelcomePage = () => {
           </Row>
         </Container>
       </div>
-    </div>
+     </div>
   );
 };
 

@@ -5,14 +5,17 @@ import './style/home.css';
 import './style/mobile.css';
 import './style/beginners.css';
 import './style/trade.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.js'
 import Navigation from './components/Navigation';
 import HomeScreen from './screens/HomeScreen';
 import TradeScreen from './screens/TradeScreen';
+import ChatScreen from './screens/ChatScreen';
+import ChatBot from './screens/ChatBot'
 import BeginnersScreen from './screens/BeginnersScreen';
 import PortfolioScreen from './screens/PortfolioScreen';
 import ProtectedRoute from './protected-routes/ProtectedRoute';
 import { UserNameProvider } from './context/UserNameContext';
+
 
 const App = () => {
   return (
@@ -22,6 +25,8 @@ const App = () => {
           <Navigation />
           <main id="main-container">
             <Route path="/" exact component={HomeScreen} />
+            <Route path="/chat" exact component={ChatScreen} />
+            <Route path="/chatbot" element={ChatBot} />
             <ProtectedRoute path="/main" component={TradeScreen} />
             <ProtectedRoute path="/portfolio" component={PortfolioScreen} />
             <ProtectedRoute path="/instructions" component={BeginnersScreen} />
@@ -31,5 +36,7 @@ const App = () => {
     </Router>
   );
 };
+
+
 
 export default App;
