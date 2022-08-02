@@ -5,7 +5,6 @@ class MessageParser {
     }
   
     parse(message) {
-      console.log(message)
       const lowercase = message.toLowerCase()
 
       if (lowercase.includes("hello")) {
@@ -24,8 +23,11 @@ class MessageParser {
       if (lowercase.includes('trade')) {
         this.actionProvider.handleStockFinder();
       }
-      if (lowercase.includes('apple') || lowercase.includes("APPL")) {
+      if (lowercase.includes('apple') || lowercase.includes("aapl")) {
         this.actionProvider.stonkResponse();
+      }
+      if (lowercase.includes("$")) {
+        this.actionProvider.searchStockBasic(lowercase)
       }
       if (lowercase.includes("bye")) {
         this.actionProvider.bye();

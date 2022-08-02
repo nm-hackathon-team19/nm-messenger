@@ -79,4 +79,21 @@ router.get('/chart', (req, res) => {
     });
 });
 
+router.get('/get-stock-info', (req, res) => {
+  const symbol = req.query.symbol;
+  axios
+    .get(
+      `http://localhost:5000/daily-info?ticker=${symbol}`
+    )
+    .then(response => {
+      res.json(response.data);
+    })
+    .catch(error => {
+      console.log('error from server- API routes', error);
+      res.status(500).json({
+        errorMessage: 'Something went wrong on the server. Please try again.',
+      });
+    });
+});
+
 module.exports = router;

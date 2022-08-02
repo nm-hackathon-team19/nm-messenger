@@ -46,3 +46,15 @@ export const searchForHolding = async symbol => {
     console.error('error in search for holding', err.message);
   }
 };
+
+export const searchForStockData = async symbol => {
+  // debugger;
+  try {
+    console.log(symbol)
+    const response = await axios.get(`/api/stocks/get-stock-info/?symbol=${symbol}`);
+    console.log(response.data)
+    return response.data;
+  } catch (err) {
+    console.error('error in search for holding', err.message);
+  }
+};

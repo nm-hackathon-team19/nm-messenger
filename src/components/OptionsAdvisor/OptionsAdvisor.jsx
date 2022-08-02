@@ -1,5 +1,4 @@
 import React from "react";
-
 import "./OptionsAdvisor.css";
 
 const OptionsAdvisor = (props) => {
