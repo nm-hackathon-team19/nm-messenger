@@ -2,10 +2,11 @@ import { createChatBotMessage } from "react-chatbot-kit";
 import Options from "../components/Options/Options";
 import React from 'react';
 import Quiz from "../components/Quiz/Quiz";
+import OptionsAdvisor from "../components/OptionsAdvisor/OptionsAdvisor";
 
 const config = {
     botName: "LeadTrade",
-  initialMessages: [createChatBotMessage(`Hello. How can I help you?`, {
+  initialMessages: [createChatBotMessage(`Hello. I am your personal ChatBot. How can I help you?`, {
       widget: "options"
   })],
   widgets: [
@@ -15,28 +16,18 @@ const config = {
 
       },
       {
-          widgetName: "javascriptQuiz",
-          widgetFunc: (props) => <Quiz {...props}/>,
-          props: {
-              questions: [
-                  {
-                      question: "What is python?",
-                      answer: "It's a snake",
-                      id: 1
-                  },
-                  {
-                    question: "What is go?",
-                    answer: "It's an action",
-                    id: 2
-                },
-                {
-                    question: "What is javascript?",
-                    answer: "It's a made up term",
-                    id: 3
-                }
-              ]
-          }
-      }
+          widgetName: "advisorHelp",
+          widgetFunc: (props) => <OptionsAdvisor {...props}/>,
+          
+          
+      },
+      {
+        widgetName: "collegeHelp",
+        widgetFunc: (props) => <OptionsAdvisor {...props}/>,
+        
+        
+    },
+
   ]
 }
 

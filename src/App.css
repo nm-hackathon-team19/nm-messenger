@@ -76,3 +76,7 @@
 .app-chatbot-button-icon {
   fill: #fff;
 }
+
+.react-chatbot-kit-chat-bot-message {
+  word-wrap: break-word;
+}
