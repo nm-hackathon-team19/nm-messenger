@@ -31,7 +31,7 @@
   },
   "main": "server.js",
   "scripts": {
-    "heroku-postbuild": "npm install --force",
+    "heroku-prebuild": "npm install --force",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
