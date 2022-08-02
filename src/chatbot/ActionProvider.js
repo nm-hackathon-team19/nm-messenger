@@ -1,4 +1,4 @@
-import { searchForStockData } from '../http-helpers/tradeUtilities';
+import { searchForStockData, searchForEarningsData, searchForWeeklyData } from '../http-helpers/tradeUtilities';
 
 const axios = require('axios');
 class ActionProvider {
@@ -84,6 +84,46 @@ stonkPrompt = () => {
   performApiCall(tick)
   
  };
+
+ searchStockWeekly = (ticker) => {
+  const performApiCall = async (s) => {
+    console.log(s)
+    try {
+      const response = await searchForWeeklyData(s);
+      console.log(response)
+      
+      const message = this.createChatBotMessage(`${ticker.toUpperCase()} is has changed by $${Number(response.current_price).toFixed(2)} (${Number(response.weekly_percentage_change.replace('%','')).toFixed(2)}%) this week`)
+      this.addMessageToState(message);
+      
+    } catch (err) {
+      console.error(err.message);
+    }
+  };
+  let tick = ticker.replace("$", '')
+  performApiCall(tick)
+  
+ };
+
+ searchStockEarnings = (ticker) => {
+   console.log(ticker)
+  const performApiCall = async (s) => {
+    console.log(s)
+    try {
+      const response = await searchForEarningsData(s);
+      console.log(response)
+      
+      const message = this.createChatBotMessage(`The latest actual earnings of ${ticker.toUpperCase()} is $${Number(response.reportedEPS).toFixed(2)}`)
+      this.addMessageToState(message);
+      
+    } catch (err) {
+      console.error(err.message);
+    }
+  };
+  let tick = ticker.replace("$", '')
+  performApiCall(tick)
+  
+ };
+
  earnings = () => {
   const message = this.createChatBotMessage("The latest actual earnings of AAPL is $1.20")
   this.addMessageToState(message);
