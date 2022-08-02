@@ -21,7 +21,7 @@ const Navigation = props => {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto d-flex justify-content-center nav-links">
-          <Nav.Link onClick={() => props.history.push('/main')}>Trade</Nav.Link>
+          {/* <Nav.Link onClick={() => props.history.push('/main')}>Trade</Nav.Link> */}
           {/* <Nav.Link onClick={() => props.history.push('/portfolio')}>
             Portfolio
           </Nav.Link> */}
