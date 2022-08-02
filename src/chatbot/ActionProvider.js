@@ -30,12 +30,12 @@ class ActionProvider {
 };
 
 handleCollegeHelp = () => {
-  const message = this.createChatBotMessage("https://www.360financialliteracy.org/Calculators/College-Savings2", {widget : "advisorHelp"})
+  const message = this.createChatBotMessage("https://www.northwesternmutual.com/college-savings-plans/")
   this.addMessageToState(message);
 };
 
 handleInsuranceHelp = () => {
-  const message = this.createChatBotMessage("https://www.northwesternmutual.com/life-insurance/", {widget : "handleInsurance"})
+  const message = this.createChatBotMessage("https://www.northwesternmutual.com/life-insurance/")
   this.addMessageToState(message);
 }; 
 
