@@ -12,9 +12,24 @@ class MessageParser {
           this.actionProvider.greet();
       }
 
-      if (lowercase.includes('javascript') || lowercase.includes("python") || lowercase.includes("golang")) {
-          this.actionProvider.handleJavascriptQuiz();
+      if (lowercase.includes("earnings")) {
+        this.actionProvider.earnings();
       }
+      if (lowercase.includes("learn more about stocks")) {
+        this.actionProvider.stonkLearnMore();
+      }
+      if (lowercase.includes("week")) {
+        this.actionProvider.weeklyStats();
+      }
+      if (lowercase.includes('trade')) {
+        this.actionProvider.handleStockFinder();
+      }
+      if (lowercase.includes('apple') || lowercase.includes("APPL")) {
+        this.actionProvider.stonkResponse();
+      }
+      if (lowercase.includes("bye")) {
+        this.actionProvider.bye();
+    }
     }
   }
   
