@@ -32,3 +32,8 @@
 .guide-text {
   font-family: 'Open Sans', sans-serif;
 }
+
+#test {
+  color: #93e6cd;
+  text-align: right;
+}
