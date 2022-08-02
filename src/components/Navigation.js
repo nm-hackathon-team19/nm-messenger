@@ -16,15 +16,15 @@ const Navigation = props => {
   return (
     <Navbar bg="dark" variant="dark" id="navbar" expand="sm">
       <Navbar.Brand href="/">
-        NM Team 19 Stock App
+        MoneyTree
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto d-flex justify-content-center nav-links">
           <Nav.Link onClick={() => props.history.push('/main')}>Trade</Nav.Link>
-          <Nav.Link onClick={() => props.history.push('/portfolio')}>
+          {/* <Nav.Link onClick={() => props.history.push('/portfolio')}>
             Portfolio
-          </Nav.Link>
+          </Nav.Link> */}
           <Nav.Link onClick={() => props.history.push('/chatbot')}>Chat</Nav.Link>
         </Nav>
         {JSON.parse(localStorage.getItem('data')) ? (

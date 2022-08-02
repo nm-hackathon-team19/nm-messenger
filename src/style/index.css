@@ -89,7 +89,7 @@ p {
 
 /* Navbar */
 .navbar-nav a:hover {
-  color: red;
+  color: rgb(115, 219, 115);
   text-decoration: none;
 }
 
