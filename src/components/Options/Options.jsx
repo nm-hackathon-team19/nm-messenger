@@ -5,33 +5,31 @@ import "./Options.css";
 const Options = (props) => {
   const options = [
     {
-      text: "I have questions about a stock. ",
-      handler: props.actionProvider.stonkPrompt,
-      id: 1,
-    },
-    { text: "I have questions about advisors.", 
-    handler: props.actionProvider.handleAdvisorHelp, id: 2 },
-    {
-      text: "I would like to talk to an advisor.",
-      handler: props.actionProvider.handleAdvisorMeet, id: 3
-    },
-    {
-      text: "Financial Planning ",
+      text: "Financial Planning",
       //handler: props.actionProvider.stonkPrompt,
       handler: props.actionProvider.handleFinancialPlanningHelp,
-      id: 4
+      id: 1
     },
     { text: "Insurance", 
     handler: props.actionProvider.handleInsuranceHelp, id: 2 },
     {
       text: "Investments",
       handler: props.actionProvider.handleInvestmentsHelp,
-      id: 5,
+      id: 3,
     },
     {
       text: "Life & Money",
       handler: props.actionProvider.handleLifeMoneyHelp,
-      id: 6,
+      id: 4,
+    },
+    {
+      text: "Learn about trading",
+      handler: props.actionProvider.stonkPrompt,
+      id: 5,
+    },
+    {
+      text: "Connect with an advisor",
+      handler: props.actionProvider.handleAdvisorMeet, id: 6
     }
 
   ];
