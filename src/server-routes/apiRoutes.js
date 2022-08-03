@@ -83,7 +83,7 @@ router.get('/daily-info', (req, res) => {
   const symbol = req.query.symbol;
   axios
     .get(
-      `http://localhost:5000/daily-info?ticker=${symbol}`
+      `https://nm-hackathon-api.atreis.dev/daily-info?ticker=${symbol}`
     )
     .then(response => {
       res.json(response.data);
@@ -100,7 +100,7 @@ router.get('/weekly-info', (req, res) => {
   const symbol = req.query.symbol;
   axios
     .get(
-      `http://localhost:5000/weekly-info?ticker=${symbol}`
+      `https://nm-hackathon-api.atreis.dev/weekly-info?ticker=${symbol}`
     )
     .then(response => {
       res.json(response.data);
@@ -117,7 +117,7 @@ router.get('/earnings', (req, res) => {
   const symbol = req.query.symbol;
   axios
     .get(
-      `http://localhost:5000/earnings?ticker=${symbol}`
+      `https://nm-hackathon-api.atreis.dev/earnings?ticker=${symbol}`
     )
     .then(response => {
       res.json(response.data);

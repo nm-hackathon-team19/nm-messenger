@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background-color: #282c34;
+  background: url('images/MTbackground.jpg') no-repeat center center/cover;
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -79,4 +79,8 @@
 
 .react-chatbot-kit-chat-bot-message {
   word-wrap: break-word;
+}
+
+.chatbackground {
+  background: url('images/NMHomePage.PNG') no-repeat center center/cover;
 }
