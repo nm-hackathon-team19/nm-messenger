@@ -3,6 +3,7 @@ import Options from "../components/Options/Options";
 import React from 'react';
 import Quiz from "../components/Quiz/Quiz";
 import OptionsAdvisor from "../components/OptionsAdvisor/OptionsAdvisor";
+import OptionsAdvisorMeet from "../components/OptionsAdvisorMeet/OptionsAdvisorMeet";
 
 const config = {
     botName: "LeadTrade",
@@ -24,9 +25,12 @@ const config = {
       {
         widgetName: "collegeHelp",
         widgetFunc: (props) => <OptionsAdvisor {...props}/>,
-        
-        
+
     },
+    {
+        widgetName: "advisorMeet",
+        widgetFunc: (props) => <OptionsAdvisorMeet {...props}/>
+    }
 
   ]
 }

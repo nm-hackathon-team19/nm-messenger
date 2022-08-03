@@ -1,15 +1,16 @@
 import React from "react";
+
 import "./OptionsAdvisor.css";
 
 const OptionsAdvisor = (props) => {
   const options = [
     {
       text: "I would like to learn more about college planning.",
-      handler: props.actionProvider.handleCollegeHelp,
+      handler: props.actionProvider.handleJavascriptQuiz,
       id: 1,
     },
     { text: "I would like to learn more about life insurances at Northwestern Mutual.", 
-    handler: props.actionProvider.handleInsuranceHelp, id: 2 },
+    handler: props.actionProvider.handleAdvisorHelp, id: 2 },
 
   ];
 

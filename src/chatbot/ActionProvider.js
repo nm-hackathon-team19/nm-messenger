@@ -34,6 +34,11 @@ class ActionProvider {
     this.addMessageToState(message);
 };
 
+handleAdvisorMeet = () => {
+  const message = this.createChatBotMessage("Please click the button:", {widget : "advisorMeet"})
+  this.addMessageToState(message);
+};
+
 handleCollegeHelp = () => {
   const message = this.createChatBotMessage("https://www.northwesternmutual.com/college-savings-plans/")
   this.addMessageToState(message);

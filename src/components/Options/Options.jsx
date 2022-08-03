@@ -11,6 +11,10 @@ const Options = (props) => {
     },
     { text: "I have questions about advisor. What information would you like?", 
     handler: props.actionProvider.handleAdvisorHelp, id: 2 },
+    {
+      text: "I would like to talk to an advisor.",
+      handler: props.actionProvider.handleAdvisorMeet, id: 3
+    }
 
   ];
   
