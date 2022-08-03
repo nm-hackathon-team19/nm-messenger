@@ -33,7 +33,7 @@ class MessageParser {
         this.actionProvider.stonkResponse();
       }
       if (lowercase.includes("$")) {
-        ticker = lowercase
+        ticker = lowercase.replace('$', '')
         this.actionProvider.searchStockBasic(lowercase)
       }
       if (lowercase.includes("bye")) {

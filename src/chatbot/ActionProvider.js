@@ -1,6 +1,8 @@
 import { searchForStockData, searchForEarningsData, searchForWeeklyData } from '../http-helpers/tradeUtilities';
 
 const axios = require('axios');
+var company_name = ''
+
 class ActionProvider {
     constructor(
      createChatBotMessage,
@@ -59,19 +61,20 @@ stonkPrompt = () => {
   const performApiCall = async (s) => {
     console.log(s)
     try {
-      const response = await searchForStockData(s);
+      const response = await searchForStockData(s.toUpperCase());
       console.log(response)
       const currentPrice = (response.daily_data["4. close"])
       console.log(currentPrice)
       const priceChange = response.daily_data["4. close"] - response.daily_data["1. open"]
       const absPriceChange = Math.abs(response.daily_data["4. close"] - response.daily_data["1. open"])
       const pricePerChange = (absPriceChange/response.daily_data["1. open"] * 100)
+      company_name = response.company_name
       if (priceChange < 0){
-        const message = this.createChatBotMessage(`${ticker.toUpperCase()} is currently trading at $${Number(currentPrice).toFixed(2)}. Today is down $${Number(absPriceChange).toFixed(2)} (${Number(pricePerChange).toFixed(2)}%).`)
+        const message = this.createChatBotMessage(`${company_name} (${ticker.toUpperCase()}) is currently trading at $${Number(currentPrice).toFixed(2)}. Today is down $${Number(absPriceChange).toFixed(2)} (${Number(pricePerChange).toFixed(2)}%).`)
         this.addMessageToState(message);
       }
       else{
-        const message = this.createChatBotMessage(`${ticker.toUpperCase()} is currently trading at $${Number(currentPrice).toFixed(2)}. Today is up $${Number(absPriceChange).toFixed(2)} (${Number(pricePerChange).toFixed(2)}%).`)
+        const message = this.createChatBotMessage(`${company_name} (${ticker.toUpperCase()}) is currently trading at $${Number(currentPrice).toFixed(2)}. Today is up $${Number(absPriceChange).toFixed(2)} (${Number(pricePerChange).toFixed(2)}%).`)
         this.addMessageToState(message);
       }
       
@@ -89,10 +92,10 @@ stonkPrompt = () => {
   const performApiCall = async (s) => {
     console.log(s)
     try {
-      const response = await searchForWeeklyData(s);
+      const response = await searchForWeeklyData(s.toUpperCase());
       console.log(response)
       
-      const message = this.createChatBotMessage(`${ticker.toUpperCase()} is has changed by $${Number(response.current_price).toFixed(2)} (${Number(response.weekly_percentage_change.replace('%','')).toFixed(2)}%) this week`)
+      const message = this.createChatBotMessage(`${company_name} (${ticker.toUpperCase()}) is has changed by $${Number(response.current_price).toFixed(2)} (${Number(response.weekly_percentage_change.replace('%','')).toFixed(2)}%) this week`)
       this.addMessageToState(message);
       
     } catch (err) {
@@ -109,10 +112,10 @@ stonkPrompt = () => {
   const performApiCall = async (s) => {
     console.log(s)
     try {
-      const response = await searchForEarningsData(s);
+      const response = await searchForEarningsData(s.toUpperCase());
       console.log(response)
       
-      const message = this.createChatBotMessage(`The latest actual earnings of ${ticker.toUpperCase()} is $${Number(response.reportedEPS).toFixed(2)}`)
+      const message = this.createChatBotMessage(`The latest actual earnings of ${company_name} (${ticker.toUpperCase()}) is $${Number(response.reportedEPS).toFixed(2)}`)
       this.addMessageToState(message);
       
     } catch (err) {
