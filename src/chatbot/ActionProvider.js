@@ -43,11 +43,108 @@ handleCollegeHelp = () => {
   const message = this.createChatBotMessage("https://www.northwesternmutual.com/college-savings-plans/")
   this.addMessageToState(message);
 };
-
-handleInsuranceHelp = () => {
-  const message = this.createChatBotMessage("https://www.northwesternmutual.com/life-insurance/")
+/*Initial Options handlers */
+handleFinancialPlanningHelp = () => {
+  const message = this.createChatBotMessage("This is your personal Advisor. How can I help?.", {widget : "financialPlanningHelp"})
   this.addMessageToState(message);
-}; 
+};
+handleInvestmentsHelp = () => {
+  const message = this.createChatBotMessage("This is your personal Advisor. How can I help?.", {widget : "investmentsHelp"})
+  this.addMessageToState(message);
+};
+handleInsuranceHelp = () => {
+  const message = this.createChatBotMessage("This is your personal Advisor. How can I help?.", {widget : "insuranceHelp"})
+  this.addMessageToState(message);
+};
+handleLifeMoneyHelp = () => {
+  const message = this.createChatBotMessage("This is your personal Advisor. How can I help?.", {widget : "lifeMoneyHelp"})
+  this.addMessageToState(message);
+};
+/*********Lowest level handles-Fin Planning */
+collegeSavingsPlan = () => {
+  const message = this.createChatBotMessage("Find information here:	https://www.northwesternmutual.com/college-savings-plans/")
+  this.addMessageToState(message);
+};
+retirementPlanning = () => {
+  const message = this.createChatBotMessage("Find information here:	https://www.northwesternmutual.com/retirement-planning")
+  this.addMessageToState(message);
+};
+privateWealthManagement = () => {
+  const message = this.createChatBotMessage("Find information here:	https://www.northwesternmutual.com/private-wealth-management/")
+  this.addMessageToState(message);
+};
+estatePlanning = () => {
+  const message = this.createChatBotMessage("Find information here:	https://www.northwesternmutual.com/long-estate-planning/")
+  this.addMessageToState(message);
+};
+longTermCare = () => {
+  const message = this.createChatBotMessage("Find information here:	https://www.northwesternmutual.com/long-term-care-planning/")
+  this.addMessageToState(message);
+};
+businessServices = () => {
+  const message = this.createChatBotMessage("Find information here:	https://www.northwesternmutual.com/business-services/")
+  this.addMessageToState(message);
+};
+/*********Lowest level handles-Insurance */
+life = () => {
+  const message = this.createChatBotMessage("Find information here:	https://www.northwesternmutual.com/life-insurance/")
+  this.addMessageToState(message);
+};
+disability = () => {
+  const message = this.createChatBotMessage("Find information here:	https://www.northwesternmutual.com/disability-insurance/")
+  this.addMessageToState(message);
+};
+longTerm = () => {
+  const message = this.createChatBotMessage("Find information here:	https://www.northwesternmutual.com/long-term-care-planning")
+  this.addMessageToState(message);
+};
+incomeAnnuities = () => {
+  const message = this.createChatBotMessage("Find information here:	https://www.northwesternmutual.com/annuities/")
+  this.addMessageToState(message);
+};
+/*********Lowest level handles-Investments */
+brokerage = () => {
+  const message = this.createChatBotMessage("Find information here:	https://www.northwesternmutual.com/brokerage-accounts-services/")
+  this.addMessageToState(message);
+};
+advisory = () => {
+  const message = this.createChatBotMessage("Find information here:	https://www.northwesternmutual.com/investment-advisory-services/")
+  this.addMessageToState(message);
+};
+privateClient = () => {
+  const message = this.createChatBotMessage("Find information here:	https://www.northwesternmutual.com/private-client-services-wealth-management")
+  this.addMessageToState(message);
+};
+market = () => {
+  const message = this.createChatBotMessage("Find information here:	https://www.northwesternmutual.com/life-and-money/market-commentary/")
+  this.addMessageToState(message);
+};
+fvAnnuities = () => {
+  const message = this.createChatBotMessage("Find information here: https://www.northwesternmutual.com/fixed-annuity-vs-variable-annuity/")
+  this.addMessageToState(message);
+};
+/*********Lowest level handles-life and money */
+family = () => {
+  const message = this.createChatBotMessage("Find information here:	https://www.northwesternmutual.com/life-and-money/your-family/")
+  this.addMessageToState(message);
+};
+home = () => {
+  const message = this.createChatBotMessage("Find information here:	https://www.northwesternmutual.com/life-and-money/your-home/")
+  this.addMessageToState(message);
+};
+career = () => {
+  const message = this.createChatBotMessage("Find information here:	https://www.northwesternmutual.com/life-and-money/your-career/")
+  this.addMessageToState(message);
+};
+moneyBasics = () => {
+  const message = this.createChatBotMessage("Find information here:	https://www.northwesternmutual.com/life-and-money/money-basics/")
+  this.addMessageToState(message);
+};
+
+// handleInsuranceHelp = () => {
+//   const message = this.createChatBotMessage("https://www.northwesternmutual.com/life-insurance/")
+//   this.addMessageToState(message);
+// }; 
 
 stonkPrompt = () => {
   const message = this.createChatBotMessage("What stock are you interested in today?")
