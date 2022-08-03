@@ -79,10 +79,10 @@ const TradeScreen = props => {
   };
 
   return (
-    <section className="trade-container">
-      <HeaderTrade />
+     <section className="trade-container">
+      {/* <HeaderTrade /> */}
       <div className="container">
-        {isShowAlert && (
+         {isShowAlert && (
           <ShowAlert
             toggleAlertState={toggleAlertState}
             isShowAlert={isShowAlert}
@@ -90,7 +90,7 @@ const TradeScreen = props => {
             sharesPurchased={sharesPurchased}
             alertMessage={alertMessage}
           />
-        )}
+        )} 
         <AddHolding handleSearchForHolding={handleSearchForHolding} />
         {selectedHolding ? (
           <SelectedHolding
@@ -100,8 +100,8 @@ const TradeScreen = props => {
             updateShares={updateShares}
           />
         ) : null}
-        <Recommendations handleSearchForHolding={handleSearchForHolding} />
-
+        <Recommendations handleSearchForHolding={handleSearchForHolding} /> 
+ 
         
         {showBot && (
         <Fade big>

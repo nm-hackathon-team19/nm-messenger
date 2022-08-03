@@ -10,3 +10,5 @@ export const getWalletData = async () => {
     console.error('Error in get wallet', err.message);
   }
 };
+
+

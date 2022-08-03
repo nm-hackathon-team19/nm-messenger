@@ -5,8 +5,8 @@ import Quiz from "../components/Quiz/Quiz";
 import OptionsAdvisor from "../components/OptionsAdvisor/OptionsAdvisor";
 
 const config = {
-    botName: "LeadTrade",
-  initialMessages: [createChatBotMessage(`Hello. I am your personal ChatBot. How can I help you?`, {
+    botName: "MoneyTree",
+  initialMessages: [createChatBotMessage(`Hello. I am MoneyTree. How can I help you?`, {
       widget: "options"
   })],
   widgets: [
