@@ -4,6 +4,10 @@ import React from 'react';
 import Quiz from "../components/Quiz/Quiz";
 import OptionsAdvisor from "../components/OptionsAdvisor/OptionsAdvisor";
 import OptionsAdvisorMeet from "../components/OptionsAdvisorMeet/OptionsAdvisorMeet";
+import FinPlanOptions from "../components/FinPlanOptions/FinPlanOptions";
+import InvestOptions from "../components/InvestOptions/InvestOptions";
+import LifeMoneyOptions from "../components/LifeMoneyOptions/LifeMoneyOptions";
+import InsOptions from "../components/InsOptions/InsOptions";
 
 const config = {
     botName: "MoneyTree",
@@ -30,6 +34,26 @@ const config = {
     {
         widgetName: "advisorMeet",
         widgetFunc: (props) => <OptionsAdvisorMeet {...props}/>
+    },
+    {
+        widgetName: "financialPlanningHelp",
+        widgetFunc: (props) => <FinPlanOptions {...props}/>,
+
+    },
+    {
+        widgetName: "insuranceHelp",
+        widgetFunc: (props) => <InsOptions {...props}/>,
+
+    },
+    {
+        widgetName: "investmentsHelp",
+        widgetFunc: (props) => <InvestOptions {...props}/>,
+
+    },
+    {
+        widgetName: "lifeMoneyHelp",
+        widgetFunc: (props) => <LifeMoneyOptions {...props}/>,
+
     }
 
   ]
