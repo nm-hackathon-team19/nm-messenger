@@ -9,7 +9,7 @@
 }
 
 #homeOne {
-  background: url('../images/NMHomePage.PNG') no-repeat center center/cover;
+  background: url('../images/NMHomePage.PNG') no-repeat center 25%/cover;
   height: 95vh;
   position: relative;
   padding: 40px;

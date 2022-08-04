@@ -27,7 +27,7 @@ const PortfolioScreen = (props) => {
     
     return (
     <section className="trade-container">
-        <div id="homeOne" class="container">
+        <div id="homeOne" >
             
             {showBot && (
         <Fade big>
